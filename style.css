@@ -163,7 +163,7 @@ body {
     flex-direction: column;
     gap: 10px;
     text-align: center;
-    border-radius: 20px;
+    border-radius: 94% 6% 92% 8% / 11% 87% 13% 89% ;
     background: linear-gradient(145deg, #939f7c, #aebd94);
     box-shadow:  5px 5px 0px #899574,
                 -5px -5px 0px #bdcda0;
@@ -173,12 +173,12 @@ v
 
 .card-content-box {
     background-color: #cd8462; 
-    border-radius: 25px;
+    /* border-radius: 25px;
     padding: 8px 15px;
     color: #2b2d42; 
     font-size: 0.9rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; */
 }
 
 
@@ -216,33 +216,41 @@ v
 
 .main-footer {
     background-color: #1a1a1a; 
-    color: #99b27f; /
-    padding: 3rem 1rem;
+    color: #99b27f; 
+    padding: 1rem 2rem;
     margin-top: auto; 
     border-top: 1px solid rgba(153, 178, 127, 0.2);
     font-family: sans-serif;
 }
 
 .footer-content {
-    max-width: 800px;
+    width: 100%;
+    max-width: 1400px;
     margin: 0 auto;
     text-align: center;
     display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
 
 
 .footer-logo {
-    font-family: "Rubik Distressed", system-ui;
+font-family: "Rubik Distressed", system-ui;
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 3px;
-    margin-bottom: 0.5rem;
+    margin: 0;              
+    flex: 1;                
+    text-align: left;
+
 }
 
 .footer-tagline {
-    font-style: italic;
+font-style: italic;
     font-size: 0.9rem;
     opacity: 0.8;
-    margin-bottom: 2rem;
+    flex: 1;                /* Centers the tagline in the middle */
+    text-align: center;
 }
 
 .footer-credits {
@@ -274,4 +282,4 @@ v
     font-size: 2rem;
     text-align: center;
     color: #a3b18a;
-}
+}   
