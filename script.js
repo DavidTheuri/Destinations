@@ -1,4 +1,3 @@
-
 const form = document.getElementById("destination-form");
 const container = document.getElementById("destination-container");
 const detailDisplay = document.getElementById("message"); 
@@ -29,21 +28,7 @@ Place.prototype.createCardHTML = function(index) {
     `;
 };
 
-function renderCards() {
-    container.innerHTML = ""; 
-
-    savedDestinations.forEach((data, index) => {
-
-        const item = new Place(data.name, data.dest, data.landmarks, data.time, data.country, data.review);
-        container.innerHTML += item.createCardHTML(index);
-    });
-}
-
-
-renderCards();
-
-
-document.getElementById("submit").onclick = function(event) {
+form.addEventListener("submit", function(event) {
     event.preventDefault();
 
 
@@ -56,14 +41,16 @@ document.getElementById("submit").onclick = function(event) {
         document.getElementById("review").value
     );
 
-    document.getElementById("footer-logo").textContent = newPlace.name + " was here";
+    const footerLogo = document.getElementById("footer-logo");
+    if(footerLogo) footerLogo.textContent = `${newPlace.name} was here`;
 
     savedDestinations.push(newPlace);
     localStorage.setItem("myPlaces", JSON.stringify(savedDestinations));
 
     renderCards();
     form.reset();
-};
+
+});
 
 window.showDetails = function(index) {
     const data = savedDestinations[index];
@@ -97,3 +84,20 @@ window.deleteCard = function(index) {
     localStorage.setItem("myPlaces", JSON.stringify(savedDestinations));
     renderCards();
 };
+
+
+
+
+function renderCards() {
+    container.innerHTML = ""; 
+
+    savedDestinations.forEach((data, index) => {
+
+        const item = new Place(data.name, data.dest, data.landmarks, data.time, data.country, data.review);
+        container.innerHTML += item.createCardHTML(index);
+    });
+}
+
+
+renderCards();
+

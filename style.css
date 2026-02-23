@@ -55,15 +55,17 @@ body {
     min-height: 100vh; 
 }
 
-.form-container {
-    background: #99b27f; 
+.form-container { 
     backdrop-filter: blur(10px); 
     padding: 40px;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
     width: 100%;
     max-width: 400px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background: rgba(163, 177, 138, 0.74);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(13.1px);
+    -webkit-backdrop-filter: blur(13.1px);
+    border: 1px solid rgba(163, 177, 138, 0.84);
 }
 .about-page {
     max-width: 1000px;
@@ -167,18 +169,13 @@ body {
     background: linear-gradient(145deg, #939f7c, #aebd94);
     box-shadow:  5px 5px 0px #899574,
                 -5px -5px 0px #bdcda0;
-v
-    }
+
+}
 
 
 .card-content-box {
     background-color: #cd8462; 
-    /* border-radius: 25px;
-    padding: 8px 15px;
-    color: #2b2d42; 
-    font-size: 0.9rem;
-    display: flex;
-    justify-content: space-between; */
+
 }
 
 
