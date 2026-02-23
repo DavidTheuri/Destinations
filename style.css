@@ -165,10 +165,8 @@ body {
     flex-direction: column;
     gap: 10px;
     text-align: center;
-    border-radius: 94% 6% 92% 8% / 11% 87% 13% 89% ;
+    border-radius: 20px ;
     background: linear-gradient(145deg, #939f7c, #aebd94);
-    box-shadow:  5px 5px 0px #899574,
-                -5px -5px 0px #bdcda0;
 
 }
 
